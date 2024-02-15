@@ -5,9 +5,10 @@
 }
 
 .container {
-    width: var(--default-layout-width);
-    padding: 0 var(--default-layout-horizontal-spacer);
     display: flex;
+    width: var(--default-layout-width);
+    margin-top: var(--default-layout-header-height);
+    padding: 0 var(--default-layout-horizontal-spacer);
 }
 
 .content {
