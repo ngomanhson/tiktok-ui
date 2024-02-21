@@ -1,6 +1,6 @@
 .search,
 .search-result {
-    width: 361px;
+    width: 500px;
 }
 
 .search {
@@ -10,7 +10,7 @@
     display: flex;
     background-color: rgba(22, 24, 35, 0.06);
     border-radius: var(--search-border-radius);
-    border: 1.5px solid transparent;
+    border: 1px solid transparent;
 
     input {
         flex: 1;

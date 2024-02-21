@@ -88,20 +88,21 @@ function Header() {
     return (
         <header className={cx("wrapper")}>
             <div className={cx("inner")}>
-                <Link to={config.routes.home} className={cx("logo-link")}>
-                    <img src={images.logo} alt="Tiktok" />
-                </Link>
+                <div className={cx("logo-wrapper")}>
+                    <Link to={config.routes.home} className={cx("logo-link")}>
+                        <img src={images.logo} alt="Tiktok" />
+                    </Link>
+                </div>
 
                 <Search />
 
                 <div className={cx("actions")}>
                     {currentUser ? (
                         <>
-                            <Tippy delay={[0, 50]} content="Upload video" placement="bottom">
-                                <button className={cx("action-btn")}>
-                                    <UploadIcon />
-                                </button>
-                            </Tippy>
+                            <button className={cx("btn-border")}>
+                                <UploadIcon />
+                                <span className={cx("btn-label")}>Upload</span>
+                            </button>
                             <Tippy delay={[0, 50]} content="Message" placement="bottom">
                                 <button className={cx("action-btn")}>
                                     <MessageIcon />

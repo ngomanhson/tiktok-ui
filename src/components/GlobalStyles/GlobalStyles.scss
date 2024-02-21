@@ -6,12 +6,12 @@
     --white: #fff;
     --text-color: #161823;
 
-    --font-family: "ProximaNova", san-serif;
+    --font-family: "TikTokFont", san-serif;
 
     // Default layout
     --default-layout-header-height: 60px;
-    --default-layout-width: 1150px;
-    --default-layout-horizontal-spacer: 24px;
+    --default-layout-width: 100%;
+    --default-layout-horizontal-spacer: 16px;
 }
 
 * {
@@ -63,27 +63,27 @@ a {
 
 // Fonts embedded
 @font-face {
-    font-family: ProximaNova;
-    src: url("/assets/fonts/Proxima-Nova-Regular.woff2");
+    font-family: TikTokFont;
+    src: url("/assets/fonts/TikTokFont-Regular.woff2");
     font-weight: 400;
 }
 
 @font-face {
-    font-family: ProximaNova;
-    src: url("/assets/fonts/ProximaNova-Semibold.woff2");
+    font-family: TikTokFont;
+    src: url("/assets/fonts/TikTokFont-Semibold.woff2");
     font-weight: 600;
 }
 
 @font-face {
-    font-family: ProximaNova;
-    src: url("/assets/fonts/Proxima-Nova-Bold.woff");
+    font-family: TikTokFont;
+    src: url("/assets/fonts/TikTokFont-Bold.woff2");
     font-weight: 700;
 }
 
 @font-face {
-    font-family: SofiaPro;
-    src: url("/assets/fonts/sofiapro-bold.woff");
-    font-weight: 700;
+    font-family: TikTokDisplayFont;
+    src: url("/assets/fonts/TikTokDisplayFont-Bold.woff2");
+    font-weight: 600;
 }
 
 // Custom tooltip
