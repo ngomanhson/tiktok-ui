@@ -1,5 +1,20 @@
 .wrapper {
-    width: 356px;
-    padding: 20px 0 26px 8px;
+    width: 240px;
+    padding: 20px 8px 26px 8px;
     margin-left: -18px;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.inner {
+    position: fixed;
+    top: 60px;
+    bottom: 0px;
+    width: 240px;
+    overflow: hidden auto;
+    overscroll-behavior-y: contain;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    perspective-origin: right top;
+    background: var(--white);
 }

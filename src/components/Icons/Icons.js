@@ -8,7 +8,7 @@ export const UploadIcon = ({ width = "2rem", height = "2rem", className }) => (
     </svg>
 );
 
-export const MessageIcon = ({ width = "2.6rem", height = "2.6rem", className }) => (
+export const MessageIcon = ({ width = "2.4rem", height = "2.4rem", className }) => (
     <svg className={className} width={width} height={height} viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path
             fillRule="evenodd"
@@ -106,4 +106,43 @@ export const LiveActiveIcon = ({ width = "3.2rem", height = "3.2rem", className 
             fill="white"
         ></path>
     </svg>
+);
+
+export const CompassIcon = ({ width = "3.2rem", height = "3.2rem", className }) => (
+    <svg fill="currentColor" className={className} width={width} height={height} viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+        <path fillRule="evenodd" clipRule="evenodd" d="M24 37.4a13.4 13.4 0 1 0 0-26.8 13.4 13.4 0 0 0 0 26.8ZM40.5 24a16.5 16.5 0 1 1-33 0 16.5 16.5 0 0 1 33 0Z"></path>
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M27.13 27.18a2 2 0 0 0 .93-1.32l1.84-9.33a.6.6 0 0 0-.9-.63l-8.14 4.92a2 2 0 0 0-.92 1.32l-1.84 9.33c-.1.52.45.9.9.63l8.13-4.92Zm-5.04-.45 3.11-1.89.7-3.57-3.1 1.89-.7 3.57Z"
+        ></path>
+    </svg>
+);
+
+export const CompassActiveIcon = ({ width = "3.2rem", height = "3.2rem", className }) => (
+    <svg fill="currentColor" className={className} width={width} height={height} viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M24 40.5a16.5 16.5 0 1 0 0-33 16.5 16.5 0 0 0 0 33Zm4.43-14.54c-.12.6-.49 1.12-1.01 1.44l-8.88 5.37a.65.65 0 0 1-.98-.69l2.01-10.18c.12-.6.49-1.12 1.01-1.44l8.88-5.37a.65.65 0 0 1 .98.69l-2.01 10.18Z"
+        ></path>
+        <path d="m21.92 26.89 3.4-2.05.76-3.9-3.4 2.06-.76 3.89Z"></path>
+    </svg>
+);
+
+export const UserArrowIcon = ({ width = "2.4rem", height = "2.4rem", className }) => (
+    <div style={{ paddingLeft: 5, paddingRight: 4 }}>
+        <svg fill="currentColor" className={className} width={width} height={height} viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.99 4a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm0 4a6 6 0 1 0 0 12.00A6 6 0 0 0 19 8ZM18.99 27c2.96 0 5.6.58 7.87 1.65l-3.07 3.06a15.38 15.38 0 0 0-4.8-.71C10.9 31 6.3 36.16 6 44c-.02.55-.46 1-1.02 1h-2c-.55 0-1-.45-.98-1C2.33 33.99 8.7 27 19 27ZM35.7 42.88 31.82 39H45a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H31.82l3.88-3.88a1 1 0 0 0 0-1.41l-1.41-1.42a1 1 0 0 0-1.42 0l-7.3 7.3a2 2 0 0 0 0 2.82l7.3 7.3a1 1 0 0 0 1.42 0l1.41-1.42a1 1 0 0 0 0-1.41Z"></path>
+        </svg>
+    </div>
+);
+
+export const UserArrowActiveIcon = ({ width = "2.4rem", height = "2.4rem", className }) => (
+    <div style={{ paddingLeft: 5, paddingRight: 4 }}>
+        <svg fill="currentColor" className={className} width={width} height={height} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="m17.851 21.44-1.94-1.94H22.5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-6.59l1.94-1.94a.5.5 0 0 0 0-.706l-.707-.708a.5.5 0 0 0-.707 0l-3.649 3.647a1 1 0 0 0 0 1.414l3.648 3.647a.5.5 0 0 0 .708 0l.707-.708a.5.5 0 0 0 0-.707ZM4.5 7c0-2.76 2.24-5 5-5s5 2.24 5 5-2.24 5-5 5-5-2.24-5-5Z"></path>
+            <path d="M1 20.72c0-3.26 3.03-7.22 8.5-7.22 1.589 0 2.971.334 4.134.888l-2.03 1.952a3 3 0 0 0-.004 4.321l1.906 1.839H5.5c-3.5 0-4.5 0-4.5-1.78Z"></path>
+        </svg>
+    </div>
 );

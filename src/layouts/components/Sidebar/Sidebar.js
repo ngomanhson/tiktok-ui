@@ -1,23 +1,22 @@
 import { useEffect, useState } from "react";
 import classNames from "classnames/bind";
-import { HomeIcon, HomeActiveIcon, UserGroupIcon, UserGroupActiveIcon, LiveIcon, LiveActiveIcon } from "~/components/Icons";
+import { HomeIcon, HomeActiveIcon, UserGroupIcon, UserGroupActiveIcon, LiveIcon, LiveActiveIcon, CompassIcon, CompassActiveIcon, UserArrowIcon, UserArrowActiveIcon } from "~/components/Icons";
 
 import config from "~/config";
 import Menu, { MenuItem } from "./Menu";
 import styles from "./Sidebar.module.scss";
-import SuggestedAccounts from "~/components/SuggestedAccounts";
+import FollowingAccounts from "~/components/FollowingAccounts";
 import * as userService from "~/services/userService";
+import Footer from "~/layouts/components/Footer";
 
 const cx = classNames.bind(styles);
-
-const PER_PAGE = 5;
 
 function Sidebar() {
     const [suggestedUsers, setSuggestedUsers] = useState([]);
 
     useEffect(() => {
         userService
-            .getSuggested({ page: 1, PER_PAGE: PER_PAGE })
+            .getFollowing({ page: 1 })
             .then((data) => {
                 setSuggestedUsers((prevUser) => [...prevUser, ...data]);
             })
@@ -26,14 +25,19 @@ function Sidebar() {
 
     return (
         <aside className={cx("wrapper")}>
-            <Menu>
-                <MenuItem title="For You" to={config.routes.home} icon={<HomeIcon />} activeIcon={<HomeActiveIcon />} />
-                <MenuItem title="Following" to={config.routes.following} icon={<UserGroupIcon />} activeIcon={<UserGroupActiveIcon />} />
-                <MenuItem title="Live" to={config.routes.live} icon={<LiveIcon />} activeIcon={<LiveActiveIcon />} />
-            </Menu>
+            <div className={cx("inner")}>
+                <Menu>
+                    <MenuItem title="For You" to={config.routes.home} icon={<HomeIcon />} activeIcon={<HomeActiveIcon />} />
+                    <MenuItem title="Following" to={config.routes.following} icon={<UserArrowIcon />} activeIcon={<UserArrowActiveIcon />} />
+                    <MenuItem title="Friends" to={config.routes.friends} icon={<UserGroupIcon />} activeIcon={<UserGroupActiveIcon />} />
+                    <MenuItem title="Explore" to={config.routes.explore} icon={<CompassIcon />} activeIcon={<CompassActiveIcon />} />
+                    <MenuItem title="Live" to={config.routes.live} icon={<LiveIcon />} activeIcon={<LiveActiveIcon />} />
+                    <MenuItem title="Profile" to={config.routes.profile} src="https://i.pinimg.com/564x/9b/a6/cc/9ba6ccf8bd2e353567fe885e6ff99f02.jpg" />
+                </Menu>
 
-            <SuggestedAccounts label="Suggested accounts" data={suggestedUsers} />
-            <SuggestedAccounts label="Following accounts" />
+                <FollowingAccounts label="Following accounts" data={suggestedUsers} />
+                <Footer />
+            </div>
         </aside>
     );
 }

@@ -106,12 +106,13 @@ function Header() {
                             <Tippy delay={[0, 50]} content="Message" placement="bottom">
                                 <button className={cx("action-btn")}>
                                     <MessageIcon />
+                                    <span className={cx("badge")}>1</span>
                                 </button>
                             </Tippy>
                             <Tippy delay={[0, 50]} content="Inbox" placement="bottom">
                                 <button className={cx("action-btn")}>
                                     <InboxIcon />
-                                    <span className={cx("badge")}>23</span>
+                                    <span className={cx("badge")}>1</span>
                                 </button>
                             </Tippy>
                         </>

@@ -1,0 +1,85 @@
+.wrapper {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 8px;
+        right: 8px;
+        top: 0px;
+        height: 1px;
+        background: rgba(22, 24, 35, 0.12);
+        transform: scaleY(0.5);
+    }
+}
+
+.label {
+    padding: 16px 8px 8px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgba(22, 24, 35, 0.75);
+}
+
+.account-item {
+    display: flex;
+    padding: 8px;
+    margin-top: -5px;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.item-info {
+    flex: 1;
+    margin-left: 12px;
+}
+
+.nickname-wrapper {
+    margin-top: 0;
+    font-size: 1.6rem;
+    color: #161823;
+    line-height: 1rem;
+}
+
+.nickname,
+.name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.nickname {
+    color: rgb(22, 24, 35);
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+    margin-top: -2px;
+    max-width: 145px;
+}
+
+.check {
+    margin-left: 4px;
+    font-size: 1.4rem;
+    color: #20d5ec;
+}
+
+.name {
+    color: rgba(22, 24, 35, 0.75);
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    max-width: 145px;
+}
+
+.more-btn {
+    padding: 8px;
+    color: var(--primary);
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+}
